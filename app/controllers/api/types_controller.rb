@@ -1,4 +1,4 @@
-class Api::CategoriesController < ApplicationController
+class Api::TypesController < ApplicationController
   def create
   end 
 
