@@ -10,6 +10,7 @@ import CategoriesNew from '../views/CategoriesNew.vue';
 Vue.use(VueRouter);
 
 const routes = [
+
   // {
   //   path: '/about',
   //   name: 'About',

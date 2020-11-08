@@ -2,23 +2,24 @@
   <div id="app">
     		<!-- Header -->
 			<header id="header">
-				<h1>Big Picture</h1>
+				<h1>Fooduget</h1>
 				<nav>
-					<ul>
-						<li><a href="#intro">Intro</a></li>
-						<li><a href="#one">What I Do</a></li>
-						<li><a href="#two">Who I Am</a></li>
-						<li><a href="#work">My Work</a></li>
-						<li><a href="#contact">Contact</a></li>
+					<ul>      
+						<li><a v-if="!isLoggedIn()" href="/login">Login</a></li>   
+						<li><a v-if="!isLoggedIn()" href="/signup">Signup</a></li>   
+    				<li><a v-if="isLoggedIn()" href="/categories">My Categories</a></li>   
+    				<li><a v-if="isLoggedIn()" href="/categories/new">Add Category</a></li>  
+    				<li><a v-if="isLoggedIn()" href="/items/new">Add Items</a></li>        
+    				<li><a v-if="isLoggedIn()" href="logout">Logout</a></li>                             
 					</ul>
 				</nav>
 			</header>
-      <router-link v-if="isLoggedIn()" to="/categories">My Categories  |  </router-link> 
+      <!-- <router-link v-if="isLoggedIn()" to="/categories">My Categories  |  </router-link> 
       <router-link v-if="isLoggedIn()" to="/categories/new">Add Category  |  </router-link> 
-      <router-link v-if="isLoggedIn()" to="/items/new"> Add Item  |  </router-link>
-      <router-link v-if="!isLoggedIn()" to="/login">Login  |  </router-link> 
-      <router-link v-if="!isLoggedIn()" to="/signup">Signup  |  </router-link> 
-      <router-link v-if="isLoggedIn()" to="/logout">Logout  |  </router-link> 
+      <router-link v-if="isLoggedIn()" to="/items/new"> Add Item  |  </router-link> -->
+      <!-- <router-link v-if="!isLoggedIn()" to="/login">Login  |  </router-link>  -->
+      <!-- <router-link v-if="!isLoggedIn()" to="/signup">Signup  |  </router-link>  -->
+      <!-- <router-link v-if="isLoggedIn()" to="/logout">Logout  |  </router-link>  -->
     <router-view/>
     	<!-- Footer -->
 		  <footer id="footer">

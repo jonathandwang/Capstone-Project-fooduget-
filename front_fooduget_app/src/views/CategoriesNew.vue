@@ -5,11 +5,19 @@
       <ul>
         <li v-for="error in errors">{{ error }}</li>
       </ul>
-      Name: <input type="text" v-model="newcategoryName" />
-      Target Budget Amount: <input type="text" v-model="newcategoryTargetBudgetAmount" />
+      <div class="form-group">
+        <label>Name:</label> 
+        <input type="text" v-model="newcategoryName" />
+      </div>
+      <div class="form-group">
+        <label>Target Budget Amount:</label>
+        <input type="text" v-model="newcategoryTargetBudgetAmount" />
       <!-- potential issue? -->
-      Occurence: <input type="text" v-model="newcategoryOccurence" />
-      Category: <input type="text" v-model="newcarYear" />
+      </div>
+      <div class="form-group">
+        <label>Occurence:</label>
+        <input type="text" v-model="newcategoryOccurence" />
+      </div>
       <input type="submit" value="Create" />
     </form>
   </div>
