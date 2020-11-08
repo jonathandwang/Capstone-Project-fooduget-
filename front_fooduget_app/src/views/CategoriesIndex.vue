@@ -1,11 +1,10 @@
 <template>
   <div class="categories-index">
-    <h1>All Categories</h1>
+    <h1>All My Categories</h1>
     <div v-for="category in categories">
-      <h4> Name {{ category.name }}</h4>
-      <p> Target Budget Amount {{ category.target_budget_amount }}</p>
+      <h4> Category name: {{ category.name }}</h4>
+      <p> Target Budget Amount: {{ category.target_budget_amount }}</p>
       <p>Occurence: {{ category.occurence }}</p>
-      <p>{{ category.user_id }}</p>
     </div>
   </div>
 </template>
@@ -21,7 +20,7 @@ export default {
   created: function() {
     axios.get("/api/categories").then(response => {
       console.log("categories index", response);
-      this.cars = response.data;
+      this.categories = response.data;
     });
   },
   methods: {},
