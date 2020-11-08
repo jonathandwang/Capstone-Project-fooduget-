@@ -1,0 +1,5 @@
+@types.map do |type|
+  {
+    name: type.name,
+  }
+end 

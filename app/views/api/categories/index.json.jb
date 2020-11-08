@@ -1,0 +1,8 @@
+@categories.map do |category|
+  {
+    name: category.name,
+    target_budget_amount: category.target_budget_amount,
+    occurence: category.occurence,
+    user_id: category.user_id,
+  }
+end 

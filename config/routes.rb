@@ -5,20 +5,24 @@ Rails.application.routes.draw do
     post "/sessions" => "sessions#create"
 
     #SHOW/CREATE CATEGORY ROUTES
-    get "/categories" => "categories#create"
+    post "/categories" => "categories#create"
     get "/categories" => "categories#index"
     get "/categories/:id" => "categories#show"
 
     #SHOW/CREATE ITEMS ROUTES
-    get "/items" => "items#create"
+    post "/items" => "items#create"
     get "/items" => "items#index"
     get "/items/:id" => "items#show"
 
     #SHOW TYPES ROUTES
-    get "/types" => "types#create"
+    post "/types" => "types#create"
     get "/types" => "types#index"
     get "/types/:id" => "types#show"
+
+    #SHOW TYPES ROUTES
+    post "/item_types" => "_item_types#create"
+    get "/item_types" => "item_types#index"
+    get "/item_types/:id" => "item_types#show"
+
   end
-
-
 end

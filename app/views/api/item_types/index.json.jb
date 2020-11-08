@@ -1,0 +1,6 @@
+@item_types.map do |item_type|
+  {
+    type_id: item_type.type_id,
+    item_id: item_type.item_id,
+  }
+end 

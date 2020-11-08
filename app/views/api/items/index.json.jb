@@ -1,0 +1,8 @@
+@items.map do |item|
+  {
+    name: item.name,
+    price: item.price,
+    category_id: item.category_id,
+    date_bought: item.date_bought,
+  }
+end 
