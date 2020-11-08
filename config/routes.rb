@@ -19,7 +19,7 @@ Rails.application.routes.draw do
     get "/types" => "types#index"
     get "/types/:id" => "types#show"
 
-    #SHOW TYPES ROUTES
+    #SHOW ITEM_TYPES ROUTES
     post "/item_types" => "_item_types#create"
     get "/item_types" => "item_types#index"
     get "/item_types/:id" => "item_types#show"
