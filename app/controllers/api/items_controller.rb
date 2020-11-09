@@ -5,6 +5,7 @@ class Api::ItemsController < ApplicationController
       name: params[:name],
       price: params[:price],
       category_id: params[:category_id],
+      #add category drop down for current_user
       date_bought: params[:date_bought],
     )
     if item.save

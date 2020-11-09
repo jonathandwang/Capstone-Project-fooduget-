@@ -7,8 +7,9 @@
       </ul> 
         Name:<input type="text" v-model="newitemName" />
         Price:<input type="text" v-model="newitemPrice" />
-        Category_Id <input type="text" v-model="newitemCategoryId" />
+        <!-- Category_Id <input type="text" v-model="newitemCategoryId" /> -->
         Date Bought:<input type="text" v-model="newitemDateBought" />
+        <!-- Type:<input type="text" v-model="newitemType" /> -->
         <button type="submit">Create</button>
     </form>
   </div>
@@ -24,6 +25,7 @@ export default {
       newitemPrice: "",
       newitemCategoryId: "",
       newitemDateBought: "",
+      // newitemType: "",
       errors: [],
     };
   },
@@ -34,6 +36,7 @@ export default {
         price: this.newitemPrice,        
         category_id: this.newitemCategoryId,
         date_bought: this.newitemDateBought,
+        // type: this.newitemType,
       };
       axios
         .post("/api/items", params)
