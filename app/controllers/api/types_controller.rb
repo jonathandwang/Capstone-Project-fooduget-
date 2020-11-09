@@ -11,7 +11,7 @@ class Api::TypesController < ApplicationController
   end 
 
   def index
-    @types = Type.all
+    @types = current_user.types
     render "index.json.jb"
   end 
 

@@ -1,10 +1,11 @@
 class Api::CategoriesController < ApplicationController
+  before_action :authenticate_user
   def create
     category = Category.new(
       name: params[:name],
       target_budget_amount: params[:target_budget_amount],
       occurence: params[:occurence],
-      user_id: params[:user_id],
+      user_id: current_user.id,
     )
     if category.save
       render json: { message: "Category created successfully"}
@@ -14,7 +15,7 @@ class Api::CategoriesController < ApplicationController
   end  
 
   def index
-    @categories = Category.all
+    @categories = current_user.categories
     render "index.json.jb"
   end 
 

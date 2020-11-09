@@ -1,4 +1,5 @@
 class Api::UsersController < ApplicationController
+  # before_action :authenticate_admin, except: [:create]
   def create
     user = User.new(
       full_name: params[:full_name],

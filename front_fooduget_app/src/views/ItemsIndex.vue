@@ -4,7 +4,7 @@
     <div v-for="item in items">
       <h4>Item name: {{ item.name }}</h4>
       <p>Price: {{ item.price }}</p>
-      <p>Category Name: {{ category.name }}</p>
+      <p>Category Id: {{ item.category_id }}</p>
       <p>Date Bought: {{ item.date_bought }}</p>
     </div>
   </div>

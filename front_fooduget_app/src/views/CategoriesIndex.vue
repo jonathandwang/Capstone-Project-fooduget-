@@ -3,7 +3,7 @@
     <h1>All My Categories</h1>
     <div v-for="category in categories">
       <h4> Category name: {{ category.name }}</h4>
-      <p> Target Budget Amount: {{ category.target_budget_amount }}</p>
+      <p>Target Budget Amount: {{ category.target_budget_amount }}</p>
       <p>Occurence: {{ category.occurence }}</p>
     </div>
   </div>

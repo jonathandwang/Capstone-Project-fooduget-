@@ -7,6 +7,7 @@ import Login from '../views/Login.vue';
 import Logout from '../views/Logout.vue';
 import CategoriesNew from '../views/CategoriesNew.vue';
 import ItemsIndex from '../views/ItemsIndex.vue';
+import ItemsNew from '../views/ItemsNew.vue';
 
 Vue.use(VueRouter);
 
@@ -27,6 +28,7 @@ const routes = [
   { path: "/login", name: "login", component: Login },
   { path: "/logout", name: "logout", component: Logout },
   { path: "/items", name: "items-index", component: ItemsIndex },
+  { path: "/items/new", name: "items-new", component: ItemsNew },
 ];
 
 const router = new VueRouter({

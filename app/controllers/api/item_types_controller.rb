@@ -12,7 +12,7 @@ class Api::ItemTypesController < ApplicationController
   end
 
   def index
-    @item_types = ItemType.all
+    @item_types = current_user.item_types
     render "index.json.jb"
   end
 

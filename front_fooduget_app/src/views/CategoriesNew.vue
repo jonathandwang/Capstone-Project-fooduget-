@@ -8,7 +8,7 @@
         Name:<input type="text" v-model="newcategoryName" />
         Target Budget Amount: <input type="text" v-model="newcategoryTargetBudgetAmount" />
         Occurence:<input type="text" v-model="newcategoryOccurence" />
-        <button v-on:click="createCategory()">Create</button>
+        <button type="submit">Create</button>
     </form>
   </div>
 </template>
@@ -27,17 +27,15 @@ export default {
   },
   methods: {
     createCategory: function () {
-      console.log("Create the category...");
       var params = {
         name: this.newcategoryName,
-        targetBudgetAmount: this.newcategoryTargetBudgetAmount,
+        target_budget_amount: this.newcategoryTargetBudgetAmount,
         occurence: this.newcategoryOccurence,
       };
       axios
         .post("/api/categories", params)
         .then((response) => {
-        console.log("Success", response.data);
-        this.categories.push(response.data);
+          this.$router.push("/categories")
         })
         .catch((error) => console.log(error.response));
     },

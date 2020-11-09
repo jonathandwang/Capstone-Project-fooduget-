@@ -1,4 +1,5 @@
 class Api::ItemsController < ApplicationController
+  before_action :authenticate_user
   def create
     item = Item.new(
       name: params[:name],
@@ -14,7 +15,7 @@ class Api::ItemsController < ApplicationController
   end 
 
   def index
-    @items = Item.all
+    @items = current_user.items
     render "index.json.jb"
   end 
 
