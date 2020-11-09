@@ -6,6 +6,7 @@ import Signup from '../views/Signup.vue';
 import Login from '../views/Login.vue';
 import Logout from '../views/Logout.vue';
 import CategoriesNew from '../views/CategoriesNew.vue';
+import ItemsIndex from '../views/ItemsIndex.vue';
 
 Vue.use(VueRouter);
 
@@ -21,10 +22,11 @@ const routes = [
   // },
   { path: "/signup", name: "signup", component: Signup},
   { path: "/categories", name: "categories-index", component: CategoriesIndex},
-  { path: "/categories/:id", name: "categories-show", component: CategoriesShow},
   { path: "/categories/new", name: "categories-new", component: CategoriesNew},
+  { path: "/categories/:id", name: "categories-show", component: CategoriesShow},
   { path: "/login", name: "login", component: Login },
   { path: "/logout", name: "logout", component: Logout },
+  { path: "/items", name: "items-index", component: ItemsIndex },
 ];
 
 const router = new VueRouter({

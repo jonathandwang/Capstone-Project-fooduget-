@@ -8,8 +8,9 @@
 						<li><a v-if="!isLoggedIn()" href="/login">Login</a></li>   
 						<li><a v-if="!isLoggedIn()" href="/signup">Signup</a></li>   
     				<li><a v-if="isLoggedIn()" href="/categories">My Categories</a></li>   
-    				<li><a v-if="isLoggedIn()" href="/categories/new">Add Category</a></li>  
-    				<li><a v-if="isLoggedIn()" href="/items/new">Add Items</a></li>        
+    				<li><a v-if="isLoggedIn()" href="/categories/new">Add Category</a></li>  		
+						<li><a v-if="isLoggedIn()" href="/items">My Items</a></li>       				
+    				<li><a v-if="isLoggedIn()" href="/items/new">Add Item</a></li>        
     				<li><a v-if="isLoggedIn()" href="logout">Logout</a></li>                             
 					</ul>
 				</nav>
@@ -20,19 +21,11 @@
       <!-- <router-link v-if="!isLoggedIn()" to="/login">Login  |  </router-link>  -->
       <!-- <router-link v-if="!isLoggedIn()" to="/signup">Signup  |  </router-link>  -->
       <!-- <router-link v-if="isLoggedIn()" to="/logout">Logout  |  </router-link>  -->
+
     <router-view/>
+
     	<!-- Footer -->
 		  <footer id="footer">
-
-				<!-- Icons -->
-					<ul class="icons">
-						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-						<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-						<li><a href="#" class="icon brands fa-pinterest"><span class="label">Pinterest</span></a></li>
-					</ul>
 
 				<!-- Menu -->
 					<ul class="menu">
