@@ -4,5 +4,6 @@
     price: item.price,
     category_id: item.category_id,
     date_bought: item.date_bought,
+    category_name: item.category.name,
   }
 end 
