@@ -1,9 +1,9 @@
 <template>
   <div id="app">
 		<!-- Page Wrapper -->
-		<div id="sidebar" v-if="!isLoggedIn()">
+		<div v-if="!isLoggedIn()">
 		<header id="header">
-			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<nav class="navbar navbar-expand-lg navbar bg">
 				<a class="navbar-brand" href="/">Foodget</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -41,9 +41,9 @@
 
 						<!-- Nav Item - Dashboard -->
 						<li class="nav-item active">
-							<a class="nav-link" href="index.html">
-								<i class="fas fa-fw fa-tachometer-alt"></i>
-								<span>MAIN</span>
+							<a class="nav-link" href="/">
+								<i class="fas fa-fw fa-tachometer-alt "></i>
+								<span>HOME</span>
 							</a>
 						</li>
 
@@ -65,13 +65,13 @@
 								aria-expanded="true"
 								aria-controls="collapseTwo"
 							>
-								<i class="fas fa-fw fa-cog"></i>
+								<i class=""></i>
 								<span>My Categories</span>
 							</a>
 							<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
 								<div class="bg-white py-2 collapse-inner rounded">
-									<a class="collapse-item" href="/categories">View Categories</a>
-									<a class="collapse-item" href="/categories/new">Add Categories</a>
+									<a class="collapse-item" href="/">View Categories</a>
+									<a class="collapse-item" href="/categories/new">Add Category</a>
 								</div>
 							</div>
 						</li>
@@ -86,7 +86,7 @@
 								aria-expanded="true"
 								aria-controls="collapseUtilities"
 							>
-								<i class="fas fa-fw fa-wrench"></i>
+								<i class=""></i>
 								<span>My Items</span>
 							</a>
 							<div
@@ -97,7 +97,7 @@
 							>
 								<div class="bg-white py-2 collapse-inner rounded">
 									<a class="collapse-item" href="/items">Views Items</a>
-									<a class="collapse-item" href="/items/new">Add items</a>
+									<a class="collapse-item" href="/items/new">Add item</a>
 								</div>
 							</div>
 						</li>
@@ -120,7 +120,7 @@
 								aria-expanded="true"
 								aria-controls="collapsePages"
 							>
-								<i class="fas fa-fw fa-folder"></i>
+								<i class=""></i>
 								<span>Logout</span>
 							</a>
 							<div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
@@ -132,53 +132,51 @@
 						</li>
 
 						<!-- Nav Item - Charts -->
-						<li class="nav-item">
+						<!-- <li class="nav-item">
 							<a class="nav-link" href="charts.html">
 								<i class="fas fa-fw fa-chart-area"></i>
 								<span>Charts</span>
 							</a>
-						</li>
+						</li> -->
 
 						<!-- Nav Item - Tables -->
-						<li class="nav-item">
+						<!-- <li class="nav-item">
 							<a class="nav-link" href="tables.html">
 								<i class="fas fa-fw fa-table"></i>
 								<span>Tables</span>
 							</a>
-						</li>
+						</li> -->
 
 						<!-- Divider -->
 						<hr class="sidebar-divider d-none d-md-block" />
 
 						<!-- Sidebar Toggler (Sidebar) -->
-						<div class="text-center d-none d-md-inline">
+						<!-- <div class="text-center d-none d-md-inline">
 							<button class="rounded-circle border-0" id="sidebarToggle"></button>
-						</div>
+						</div> -->
 
 						<!-- Sidebar Message -->
 					</ul>
 				</div>
 				<!-- End of Sidebar -->
 			</header>
-    
-
-
-
+  
       <!-- Content Wrapper -->
       <div id="content-wrapper" class="d-flex flex-column">
 
           <!-- Main Content -->
           <div id="content">
 						 <!-- Begin Page Content -->
-              <div class="container-fluid">
+              <div class="container">
 
                   <!-- Page Heading -->
-                  <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                      <h1 class="h3 mb-0 text-gray-800">Welcome to Foodget</h1>
+                  <div class="d-sm-flex align-items-center justify-content-between mb-4" style="justify-content: center !important;">
+                      <h1 class="h4 mb-2 text-black-500 ">Welcome to Foodget</h1>
                   </div>
 
                   <!-- Content Row -->
-                  <div class="row">
+                  <div class="row justify-content-center">
+									
 
 										<router-view />
                   </div>
@@ -187,11 +185,12 @@
       </div>
     </div>
 
+
     <!-- Footer -->
     <footer class="sticky-footer bg-white">
       <div class="container my-auto">
         <div class="copyright text-center my-auto">
-          <span>Copyright &copy; Your Website 2020</span>
+          <span>Copyright &copy; Foodget 2020</span>
         </div>
       </div>
     </footer>
@@ -199,8 +198,20 @@
   </div>
   <!-- End of Content Wrapper -->
 </template>
+<style>
+#content-wrapper {
+	background: url("/ingredients.jpeg") no-repeat center center fixed;
+	background-size: cover;
+}
+</style>
 
 <script>
+import Vue from 'vue'
+import Chartkick from 'vue-chartkick'
+import Chart from 'chart.js'
+
+Vue.use(Chartkick.use(Chart))
+
 export default {
   methods: {
     isLoggedIn: function() {

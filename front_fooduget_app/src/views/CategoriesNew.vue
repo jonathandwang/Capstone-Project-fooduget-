@@ -8,10 +8,16 @@
       <ul>
         <li class="text-danger" v-for="error in errors">{{ error }}</li>
       </ul> 
-        Name:<input type="text" v-model="newcategoryName" />
-        Budget Amount: <input type="text" v-model="newcategoryTargetBudgetAmount" />
-        Reoccurence:<input type="text" v-model="newcategoryOccurence" />
-        <button type="submit">Create</button>
+      <div>
+        Name:<input type="text" class="form-control" v-model="newcategoryName" />
+      </div>
+      <div>
+        Budget Amount: <input type="text" class="form-control" v-model="newcategoryTargetBudgetAmount" />
+      </div>
+      <div>
+        Reoccurence:<input type="text" class="form-control" v-model="newcategoryOccurence" />
+        </div> 
+        <input type="submit" button class="btn btn-info btn-block my-4" value="Submit"></button>
     </form>
         </div>
   </div>
@@ -39,7 +45,7 @@ export default {
       axios
         .post("/api/categories", params)
         .then((response) => {
-          this.$router.push("/categories")
+          this.$router.push("/")
         })
         .catch((error) => console.log(error.response));
     },

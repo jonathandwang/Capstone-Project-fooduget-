@@ -1,25 +1,20 @@
 <template>
 <table class="table">
-  <thead>
+    <thead class="thead-dark">
     <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Price</th>
-      <th scope="col">Category</th>
-      <th scope="col">Date Bought</th>
+      <th class="th-lg">Name</th>
+      <th class="th-lg">Price</th>
+      <th class="th-lg">Category</th>
+      <th class="th-lg">Date Bought</th>
     </tr>
   </thead>
   <tbody>
-    <div class="items-index">
-    <div v-for="item in items">
-    <tr>
-      <th scope="row"></th>
-      <td>{{ item.name }}</td>
-      <td>{{ item.price }}</td>
-      <td>{{ item.category_name }}</td>
-      <td>{{ item.date_bought }}</td>      
-    </tr>
-  </div>
-    </div>
+    <tr v-for="item in items">
+        <td> {{item.name}}</td>
+        <td> {{item.price}}</td>
+        <td> {{item.category_name}}</td>
+        <td> {{item.date_bought}}</td>
+     </tr>
   </tbody>
 </table>
                     

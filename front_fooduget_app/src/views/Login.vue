@@ -1,5 +1,5 @@
 <template>
-  <div class="login">
+  <div class="login" style="text-align:center">
 
 
                       <!-- <form v-on:submit.prevent="submit()">
@@ -19,12 +19,12 @@
                       </form> -->
                       <!-- Default form login -->
   <form v-on:submit.prevent="submit()">
-    <p class="h4 mb-4">Sign in</p>
+    <div class="h4 m" >Sign in</div>
       <ul>
       <li class="text-danger" v-for="error in errors">{{ error }}</li>
       </ul>
     <!-- Email -->
-    <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" v-model= "email" placeholder="E-mail">
+    <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" v-model= "email" placeholder="Email">
 
     <!-- Password -->
     <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" v-model= "password" placeholder="Password">

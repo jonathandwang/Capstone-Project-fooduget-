@@ -1,13 +1,27 @@
 <template>
   <div class="categories-show">
-    <h4>{{ category.name }}</h4>
     <p>Name: {{ category.name }}</p>
-    <p>Target Budget Amount: {{ category.target_budget_amount }}</p>
-    <p>Occurence: {{category.occurence }}</p>
+    <p>Budget Amount: {{ category.target_budget_amount }}</p>
+    <p>Reoccurence: {{ category.occurence }}</p>
+    <p class="mb-0 flagged" v-if="isOverBudget(category.target_budget_amount, category.total_spent)">Total Spent: ${{ category.total_spent }}</p>
+    <p class="mb-0 green" v-else>Total Spent: ${{ category.total_spent }}</p>    
     <br>
-    <router-link to="/categories">Back to all Categories</router-link>
+    <area-chart :data="data"></area-chart>
+    <div v-for="item in category.items"> 
+      {{ item }}
+    </div>
+    <router-link to="/">Back to all Categories</router-link>
   </div>
 </template>
+
+<style>
+.green{
+    color: green;
+}
+.flagged{
+    color: red;
+}
+</style>
 
 <script>
 import axios from "axios";
@@ -15,14 +29,35 @@ export default {
   data: function() {
     return {
       category: {},
+      data: {},
     };
   },
   created: function() {
     axios.get("/api/categories/" + this.$route.params.id).then(response => {
       console.log("categories show", response);
       this.category = response.data;
+      this.setupChart() 
     });
   },
-  methods: {},
+  methods: {
+    setupChart: function() {
+      
+      var foodData={} 
+      var budgetData={}
+      var total = 0
+      this.category.items.forEach(item=> {
+        total += parseFloat(item.price)
+        foodData[item.date_bought] = total
+        budgetData[item.date_bought] = this.category.target_budget_amount  
+      })
+      this.data=[
+        {name:"budget", data: budgetData},
+        {name:"items", data: foodData}
+      ]
+    },
+    isOverBudget: function(budget, spent) {
+      return spent > budget;
+    } 
+  },
 };
 </script> 

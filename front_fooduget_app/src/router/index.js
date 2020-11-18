@@ -3,8 +3,8 @@ import VueRouter from 'vue-router';
 import CategoriesIndex from '../views/CategoriesIndex.vue';
 import CategoriesShow from  '../views/CategoriesShow.vue';
 import Signup from '../views/Signup.vue';
-import Logout from '../views/Logout.vue';
 import Login from '../views/Login.vue';
+import Logout from '../views/Logout.vue';
 import CategoriesNew from '../views/CategoriesNew.vue';
 import ItemsIndex from '../views/ItemsIndex.vue';
 import ItemsNew from '../views/ItemsNew.vue';
@@ -21,8 +21,8 @@ const routes = [
   //   // which is lazy-loaded when the route is visited.
   //   component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   // },
+  { path: "/", name: "categories-index", component: CategoriesIndex},
   { path: "/signup", name: "signup", component: Signup},
-  { path: "/categories", name: "categories-index", component: CategoriesIndex},
   { path: "/categories/new", name: "categories-new", component: CategoriesNew},
   { path: "/categories/:id", name: "categories-show", component: CategoriesShow},
   { path: "/login", name: "login", component: Login },

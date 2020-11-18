@@ -1,29 +1,5 @@
 <template>
-  <!-- <div class="signup">
-    <form v-on:submit.prevent="submit()">
-      <h1>Signup</h1>
-      <ul>
-        <li class="text-danger" v-for="error in errors">{{ error }}</li>
-      </ul>
-       <div class="form-group">
-        <label>Username:</label>
-        <input type="text" class="form-control" v-model="user_name">
-      </div>
-      <div class="form-group">
-        <label>Email:</label>
-        <input type="email" class="form-control" v-model="email">
-      </div>
-      <div class="form-group">
-        <label>Password:</label>
-        <input type="password" class="form-control" v-model="password">
-      </div>
-      <div class="form-group">
-        <label>Password confirmation:</label>
-        <input type="password" class="form-control" v-model="passwordConfirmation">
-      </div>
-      <input type="submit" class="btn btn-primary" value="Submit">
-    </form>
-  </div> -->
+<div class="sign-up" style="text-align:center">
     <form v-on:submit.prevent="submit()">
     <p class="h4 mb-4">Sign in</p>
       <ul>
@@ -44,6 +20,7 @@
     <!-- Sign Up button -->
     <input type="submit" button class="btn btn-info btn-block my-4" value="Submit"></button>
   </form>
+  </div>
 </template>
 
 <script>

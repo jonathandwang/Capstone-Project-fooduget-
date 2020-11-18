@@ -4,44 +4,73 @@
     <form v-on:submit.prevent="createItem()">
       <ul>
         <li class="text-danger" v-for="error in errors">{{ error }}</li>
-      </ul> 
-        Name:<input type="text" v-model="newitemName" />
-        Price: <input type="text" v-model="newitemPrice" />
-        Category_Id: <input type="text" v-model="newitemCategoryId" />
-        Date Bought:<input type="text" v-model="newitemDateBought" />
-        <button type="submit">Create</button>
+      </ul>
+      <div class="form-group">
+        Name:
+        <input type="text" class="form-control" v-model="newitemName" />
+      </div>
+      <div>
+        Price:
+        <input type="text" class="form-control" v-model="newitemPrice" />
+      </div>
+      <div>
+        <!-- <label for="exampleFormControlOccurence">Reoccurence:</label>
+              <select class="form-control" id="exampleFormControlOccurence">
+                <option>Weekly</option>
+                <option>Bi-Weekly</option>
+                <option>Monthly</option>
+              </select> -->
+        Category_Id:
+        <select v-model="newitemCategoryId" class="form-control" >
+          <option v-for="category in categories" v-bind:value="category.id">
+            {{ category.name }}
+          </option>
+        </select>
+        <!-- <input type="text" class="form-control" v-model="newitemCategoryId" /> -->
+      </div>
+      <div>
+        Date Bought:
+        <input type="text" class="form-control" v-model="newitemDateBought" />
+      </div>
+        <input type="submit" button class="btn btn-info btn-block my-4" value="Submit"></button>
     </form>
   </div>
-
 </template>
 
 <script>
 import axios from "axios";
 
 export default {
-  data: function () {
+  data: function() {
     return {
       newitemName: "",
       newitemPrice: "",
       newitemCategoryId: "",
       newitemDateBought: "",
+      categories: [],
       errors: [],
     };
   },
+  created: function() {
+    axios.get("/api/categories").then(response => {
+      console.log("categories index", response);
+      this.categories = response.data;
+    });
+  },
   methods: {
-    createItem: function () {
+    createItem: function() {
       var params = {
         name: this.newitemName,
-        price: this.newitemPrice,        
+        price: this.newitemPrice,
         category_id: this.newitemCategoryId,
         date_bought: this.newitemDateBought,
       };
       axios
         .post("/api/items", params)
-        .then((response) => {
-          this.$router.push("/items")
+        .then(response => {
+          this.$router.push("/items");
         })
-        .catch((error) => console.log(error.response));
+        .catch(error => console.log(error.response));
     },
   },
 };
