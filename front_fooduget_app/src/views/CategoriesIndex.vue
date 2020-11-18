@@ -12,9 +12,9 @@
         </div>
         <div class="card-body">
           <p class="mb-0">Budget Amount: ${{ category.target_budget_amount }}</p>
-          <p class="mb-0">Occurence: {{ category.occurence }}</p>
+          <p class="mb-0">Recccurence: {{ category.occurence }}</p>
           <p class="mb-0 flagged" v-if="isOverBudget(category.target_budget_amount, category.total_spent)">Total Spent: ${{ category.total_spent }}</p>
-          <p class="mb-0 green" v-else>Total Spent: ${{ category.total_spent }}</p>
+          <p class="mb-0 green" v-else>Total Amount Spent: ${{ category.total_spent }}</p>
           <p class="mb-0 bold">Amount left: ${{ category.target_budget_amount - category.total_spent}}</p>
         </div>
       </div>

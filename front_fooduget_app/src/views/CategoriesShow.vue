@@ -58,7 +58,7 @@ export default {
       })
       this.data=[
         {name:"budget", data: budgetData},
-        {name:"items", data: foodData}
+        {name:"amount spent", data: foodData}
       ]
     },
     isOverBudget: function(budget, spent) {
