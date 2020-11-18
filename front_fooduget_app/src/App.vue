@@ -70,7 +70,6 @@
 							</a>
 							<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
 								<div class="bg-white py-2 collapse-inner rounded">
-									<a class="collapse-item" href="/">View Categories</a>
 									<a class="collapse-item" href="/categories/new">Add Category</a>
 								</div>
 							</div>

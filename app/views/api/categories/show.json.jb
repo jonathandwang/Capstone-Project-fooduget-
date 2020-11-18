@@ -4,7 +4,7 @@
   target_budget_amount: @category.target_budget_amount,
   occurence: @category.occurence,
   user_id: @category.user_id,
-  items: @category.items,
+  items: @category.items.sort_by {|item| item.date_bought},
   total_spent: @category.total_spent,
 
 }

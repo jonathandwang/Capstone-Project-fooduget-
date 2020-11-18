@@ -9,9 +9,9 @@
     </tr>
   </thead>
   <tbody>
-    <tr v-for="item in items">
+    <tr v-for="item in items" id="itemColor">
         <td> {{item.name}}</td>
-        <td> {{item.price}}</td>
+        <td> ${{item.price}}</td>
         <td> {{item.category_name}}</td>
         <td> {{item.date_bought}}</td>
      </tr>
@@ -28,6 +28,14 @@
     </div>
     </div> -->
 </template>
+
+<style>
+#itemColor{
+    font:  bolder;
+    color: black;
+}
+
+</style>
 
 <script>
 import axios from "axios";

@@ -20,7 +20,7 @@
                 <option>Bi-Weekly</option>
                 <option>Monthly</option>
               </select> -->
-        Category_Id:
+        Category Name:
         <select v-model="newitemCategoryId" class="form-control" >
           <option v-for="category in categories" v-bind:value="category.id">
             {{ category.name }}
@@ -36,6 +36,13 @@
     </form>
   </div>
 </template>
+
+<style>
+.items-new{
+  color:black;
+  font-weight: bold;
+}
+</style>
 
 <script>
 import axios from "axios";

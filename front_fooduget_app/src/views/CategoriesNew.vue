@@ -1,8 +1,6 @@
 <template>
   <div class="categories-new"> 
-        <div class="card-header py-3">
-          <h6 class="m-0 font-weight-bold text-primary">Add Category</h6>
-        </div>
+    <h1>Add Category</h1>
         <div class="card-body">
     <form v-on:submit.prevent="createCategory()">
       <ul>
@@ -22,6 +20,13 @@
         </div>
   </div>
 </template>
+
+<style>
+.categories-new{
+  color:black;
+  font-weight: bold;
+}
+</style>
 
 <script>
 import axios from "axios";

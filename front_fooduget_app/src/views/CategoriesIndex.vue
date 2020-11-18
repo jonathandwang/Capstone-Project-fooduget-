@@ -7,14 +7,15 @@
       <div class="card shadow mb-4 text-center">
         <div class="card-header py-3">
           <a class="link" v-bind:href="`/categories/${category.id}`">
-            <h6 class="m-0 font-weight-bold text-primary">Category: {{ category.name }}</h6>
+            <h6 class="m-0 font-weight-bold text-primary">{{ category.name }}</h6>
           </a>
         </div>
         <div class="card-body">
-          <p class="mb-0">Target Budget Amount: ${{ category.target_budget_amount }}</p>
+          <p class="mb-0">Budget Amount: ${{ category.target_budget_amount }}</p>
           <p class="mb-0">Occurence: {{ category.occurence }}</p>
           <p class="mb-0 flagged" v-if="isOverBudget(category.target_budget_amount, category.total_spent)">Total Spent: ${{ category.total_spent }}</p>
           <p class="mb-0 green" v-else>Total Spent: ${{ category.total_spent }}</p>
+          <p class="mb-0 bold">Amount left: ${{ category.target_budget_amount - category.total_spent}}</p>
         </div>
       </div>
     </div>
