@@ -29,5 +29,6 @@ class Api::ItemTypesController < ApplicationController
       render json: { message: "Item Successfully Deleted!" }
     else 
       render json: { message: "Item Deletion Unsuccessful!" }
+    end
   end 
 end

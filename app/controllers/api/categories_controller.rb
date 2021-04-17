@@ -32,6 +32,7 @@ class Api::CategoriesController < ApplicationController
       render json: { message: "Category Successfully Deleted!" }
     else 
       render json: { message: "Category Deletion Unsuccessful!" }
+    end 
   end 
 end
 
