@@ -4,15 +4,17 @@ Rails.application.routes.draw do
     post "/users" => "users#create"
     post "/sessions" => "sessions#create"
 
-    #SHOW/CREATE CATEGORY ROUTES
+    #SHOW/CREATE/DELETE CATEGORY ROUTES
     post "/categories" => "categories#create"
     get "/categories" => "categories#index"
     get "/categories/:id" => "categories#show"
+    delete "/categories/:id" => "categories#destroy"
 
-    #SHOW/CREATE ITEMS ROUTES
+    #SHOW/CREATE/DELETE ITEMS ROUTES
     post "/items" => "items#create"
     get "/items" => "items#index"
     get "/items/:id" => "items#show"
+    delete "/items/:id" => "items#destroy"
 
     #SHOW TYPES ROUTES
     post "/types" => "types#create"
