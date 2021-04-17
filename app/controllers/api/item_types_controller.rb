@@ -20,15 +20,4 @@ class Api::ItemTypesController < ApplicationController
     @item_type = ItemType.find_by(id:params[:id])
     render "show.json.jb"
   end 
-
-  def destroy
-    item = item.find(params[:id])
-    if item
-      item.destroy
-      item.save
-      render json: { message: "Item Successfully Deleted!" }
-    else 
-      render json: { message: "Item Deletion Unsuccessful!" }
-    end
-  end 
 end
