@@ -25,8 +25,13 @@ class Api::CategoriesController < ApplicationController
   end 
 
   def destroy
-    category = Category.find(params[:id])
+    category = Category.find_by(id:params[:id])
     if category
+      items = Item.where(category_id: category.id)
+      items.map do |item|
+        item.destroy
+        item.save
+      end 
       category.destroy
       category.save
       render json: { message: "Category Successfully Deleted!" }
