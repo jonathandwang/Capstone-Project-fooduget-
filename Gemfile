@@ -43,3 +43,10 @@ gem 'rack-cors'
 gem 'jb'
 gem 'jwt'
 gem 'rubocop'
+
+group :development, :test do
+  gem 'byebug', platform: :mri
+  gem 'rspec-rails', '~> 3.5'
+  gem 'capybara'
+  gem 'database_cleaner'
+end
