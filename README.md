@@ -1,6 +1,6 @@
 # README
 
-A barebones Food Budgeting Web Application to help track personal food bugdgeting in various user-made categories and items. 
+A barebones Food Budgeting Web Application to help track personal food budgeting in user-made categories and items. 
 
 ## Backend Server Configuration 
 
