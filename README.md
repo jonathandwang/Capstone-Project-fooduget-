@@ -17,6 +17,7 @@ A barebones Food Budgeting Web Application to help track personal food bugdgetin
 - `rails db:migrate`
 - `rails db:seed`
 - `rails s`
-- Ruby on Rails Server should Start
+- Ruby on Rails Server should Start!
+
 * ...
 # fooduget_app
