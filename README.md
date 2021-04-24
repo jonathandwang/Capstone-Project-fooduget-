@@ -7,7 +7,7 @@ A barebones Food Budgeting Web Application to help track personal food budgeting
 [ Requirements on Device ]
 - Ruby 2.7.1 or greater
 - Rails 6.1.3.4 or greater
-- Some type of RDBMS (I use Postgresql)
+- Some type of RDBMS (I use Postgresql 13.2)
 
 [ Steps to Setup on your Device]
 - Open Terminal 
