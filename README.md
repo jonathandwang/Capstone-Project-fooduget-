@@ -1,25 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A barebones Food Budgeting Web Application to help track personal food bugdgeting in various user-made categories and items. Also Clone Frontend-Fooduget-Frontend repository for Vue frontend display. 
 
-Things you may want to cover:
+[ Requirements on Device ]
+- Ruby 2.7.1 or greater
+- Rails 6.1.3.4 or greater
+- Some type of RDBMS (I use Postgresql)
+- Updated Node.js
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
+[ Steps to Setup on your Device]
+- Open Terminal 
+- Be inside the folder in your terminal that you want to place repository
+- `git clone https://github.com/jonathandwang/Capstone-Project-fooduget-.git`
+- `bundle install`
+- `rails db:create `
+- `rails db:migrate`
+- `rails db:seed`
+- `rails s`
+- Ruby on Rails Server should Start
 * ...
 # fooduget_app
