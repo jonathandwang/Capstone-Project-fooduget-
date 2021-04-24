@@ -18,7 +18,7 @@ A barebones Food Budgeting Web Application to help track personal food budgeting
 - `rails db:migrate`
 - `rails db:seed`
 - `rails s`
-- Ruby on Rails Server should Start!
+- Ruby on Rails Server should run!
 
 
 ### Also Clone Frontend-Fooduget-Frontend repository for Vue frontend display. 
