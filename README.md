@@ -4,12 +4,12 @@ A barebones Food Budgeting Web Application to help track personal food budgeting
 
 ## Backend Server Configuration 
 
-[ Requirements on Device ]
+[Requirements on Device ]
 - Ruby 2.7.1 or greater
 - Rails 6.1.3.4 or greater
 - Some type of RDBMS (I use Postgresql 13.2)
 
-[ Steps to Setup on your Device]
+[Steps to Setup on your Device]
 - Open Terminal 
 - Be inside the folder in your terminal that you want to place repository
 - `git clone https://github.com/jonathandwang/Capstone-Project-fooduget-.git`
