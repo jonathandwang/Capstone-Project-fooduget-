@@ -1,12 +1,13 @@
 # README
 
-A barebones Food Budgeting Web Application to help track personal food bugdgeting in various user-made categories and items. Also Clone Frontend-Fooduget-Frontend repository for Vue frontend display. 
+A barebones Food Budgeting Web Application to help track personal food bugdgeting in various user-made categories and items. 
+
+## Backend Server Configuration 
 
 [ Requirements on Device ]
 - Ruby 2.7.1 or greater
 - Rails 6.1.3.4 or greater
 - Some type of RDBMS (I use Postgresql)
-- Updated Node.js
 
 [ Steps to Setup on your Device]
 - Open Terminal 
@@ -19,5 +20,7 @@ A barebones Food Budgeting Web Application to help track personal food bugdgetin
 - `rails s`
 - Ruby on Rails Server should Start!
 
+
+### Also Clone Frontend-Fooduget-Frontend repository for Vue frontend display. 
 * ...
 # fooduget_app
