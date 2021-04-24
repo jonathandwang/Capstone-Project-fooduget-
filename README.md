@@ -22,5 +22,3 @@ A barebones Food Budgeting Web Application to help track personal food bugdgetin
 
 
 ### Also Clone Frontend-Fooduget-Frontend repository for Vue frontend display. 
-* ...
-# fooduget_app
