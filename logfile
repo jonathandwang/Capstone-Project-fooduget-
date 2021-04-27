@@ -3053,3 +3053,8 @@
 2021-04-24 15:52:58.278 CDT [7483] ERROR:  database "fooduget_app_development" is being accessed by other users
 2021-04-24 15:52:58.278 CDT [7483] DETAIL:  There is 1 other session using the database.
 2021-04-24 15:52:58.278 CDT [7483] STATEMENT:  DROP DATABASE IF EXISTS "fooduget_app_development"
+2021-04-26 22:08:04.756 CDT [41663] ERROR:  column "category_id" referenced in foreign key constraint does not exist
+2021-04-26 22:08:04.756 CDT [41663] STATEMENT:  ALTER TABLE "users" ADD CONSTRAINT "fk_rails_829251d812"
+	FOREIGN KEY ("category_id")
+	  REFERENCES "categories" ("id")
+	
