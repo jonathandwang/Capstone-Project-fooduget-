@@ -12,16 +12,16 @@ class Api::CategoriesController < ApplicationController
     else
       render json: { errors: @category.errors.full_messages }
     end
-  end  
+  end
 
   def index
     @categories = current_user.categories.includes(:items)
-    render "index.json.jb"
-  end 
+    render 'index.json.jb'
+  end
 
   def show
     @category = Category.find_by(id:params[:id])
-    render "show.json.jb"
+    render 'show.json.jb'
   end 
 
   def destroy
