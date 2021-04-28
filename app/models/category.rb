@@ -3,8 +3,6 @@ class Category < ApplicationRecord
   has_many :items
 
   def total_spent
-    items.reduce(0) {|total, item| total + item.price }
-
-  end   
-
+    items.reduce(0) { |total, item| total + item.price }
+  end
 end

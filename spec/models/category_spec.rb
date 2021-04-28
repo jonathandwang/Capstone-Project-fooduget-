@@ -1,20 +1,17 @@
 require 'rails_helper'
 
-
-class Calculator
-  def subtract(number_one,number_two)
-    return number_one - number_two
+class Category
+  def total_spent
+    items.reduce(0) { |total, item| total + item.price }
   end
 end
 
-RSpec.describe Calculator do
-  describe "#subtract" do
-    it "should return the difference between numbers" do
-      calculator = Calculator.new
-      result = calculator.subtract(10,4)
-      expect(result).to eq(6)
+RSpec.describe Category, type: :model do
+  describe '#totalspent' do
+    it 'returns total after adding up items' do
+      items = [2, 3, 9]
+      result = Category.new.total_spent.items
+      expect(result).to eq(14)
     end
   end
 end
-
-
