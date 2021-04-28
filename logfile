@@ -3058,3 +3058,5 @@
 	FOREIGN KEY ("category_id")
 	  REFERENCES "categories" ("id")
 	
+2021-04-27 22:05:46.049 CDT [56166] ERROR:  invalid input syntax for type date: "1991"
+2021-04-27 22:05:46.049 CDT [56166] STATEMENT:  INSERT INTO "items" ("name", "price", "category_id", "date_bought", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"
